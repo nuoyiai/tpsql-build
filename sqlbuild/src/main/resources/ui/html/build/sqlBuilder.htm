@@ -1,0 +1,109 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>生成实体</title>
+<script src="../../js/boot.js" type="text/javascript" ></script>
+<script src="../../js/build/buildCommon.js" type="text/javascript" ></script>
+<script src="../../js/build/buildEntry.js" type="text/javascript" ></script>
+</head>
+<script>
+    $.json.attach("TV",{"DataBase":[]});
+    $.json.attach("TV",{"Menus":[{"id":"buildEntry","pid":1,"text":"生成实体映射","group":1},{"id":"buildSqlMap","pid":1,"text":"生成SqlMap"}]});
+    var ctrls=[];
+
+    function hasTable(name){
+        for(var i=0;i<ctrls.length;i++){
+            if(ctrls[i].title==name)return true;
+        }
+        return false;
+    }
+
+    function showPanel(){
+        $("#buildPanel").ctrl().show(400,200);
+
+        $("#buildButton").bind("click",function(){
+            var pagckage = $("#pagckage").val();
+            var json = getBuildJson();
+            var codeJson = buildEntry(json,pagckage);
+            var jsonString = JSON.stringify(codeJson);
+            jQuery.post("/build/buildCodeFiles",{json:jsonString},function(result){
+                $("#buildPanel").ctrl().hide();
+                window.location.href="/build/downloadBuildFile?filename="+result;
+            });
+        });
+    }
+
+    function dragTable(args){
+        with(args.data){
+            if(!hasTable(text)){
+                jQuery.post("/build/getTableJson?tableName="+text,{},function(result) {
+                    var json = jQuery.parseJSON(result);
+                    var obj = {};
+                    obj[text] = json;
+                    $.json.attach("DS", obj);
+                    var grid = $("<gridbox width='700' headline='" + text + "' remark='" + remark + "' check='true' multiselect='true' data='DS." + text + "' fields='name,type,desc,length,precision,scale' columns='字段名称,数据类型,描述,长度,整数精度,小数精度' ></gridbox>");
+                    $("body").append(grid);
+                    var list = tptps.ctrl.render(grid[0]);
+                    list[0].setSelectedAll(true);
+                    ctrls.push(list[0]);
+                });
+            }
+        }
+    }
+
+    function doBuildSqlMap() {
+        var json = getBuildJson();
+        var codeJson = buildSqlMap(json);
+        var jsonString = JSON.stringify(codeJson);
+        jQuery.post("/build/buildCodeFiles",{json:jsonString},function(result){
+            $("#buildPanel").ctrl().hide();
+            window.location.href="/build/downloadBuildFile?filename="+result;
+        });
+    }
+
+    function getBuildJson(){
+        var json={};
+        for(var i=0;i<ctrls.length;i++){
+            json[ctrls[i].headline]={"name":ctrls[i].headline,"remark":ctrls[i].remark,"fields":ctrls[i].getSelectRowData()};
+        }
+        return json;
+    }
+
+    function buildCode(args){
+        $("#menu").ctrl().hide();
+        with(args){
+            switch(value){
+                case "buildEntry":
+                    $.raise("showPanel",{});
+                    break;
+                case "buildSqlMap":{
+                    $.raise("doBuildSqlMap",{});
+                    break;
+                }
+            }
+        }
+    }
+
+    $(function(){
+        $("#buildPanel").ctrl().hide();
+        jQuery.post("/build/getTableTree",{},function(text){
+            json = jQuery.parseJSON(text);
+            $.json.attach("TV",{"DataBase":json});
+            $("#dbTree").ctrl().dataBinding();
+        });
+    });
+
+</script>
+<body>
+<treebox id="dbTree" width="400" multiselect="false" data="TV.DataBase" onafternodeselected="dragTable" ></treebox>
+<mousemenu id="menu" width="200" multiselect="false" data="TV.Menus" onafternodeselected="buildCode" ></mousemenu>
+<panel id="buildPanel" width="400" height="200" title="参数设置" >
+	<div>
+		<label>包名:</label>
+		<textbox id="pagckage" width="200" ></textbox>
+		<input id="buildButton" type="button" value="生成" />
+	</div>
+</panel>
+<script>tptps.ctrl.render();</script>
+</body>
+</html>

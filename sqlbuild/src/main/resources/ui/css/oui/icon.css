@@ -1,0 +1,67 @@
+
+.icon-upTriangle4 {background:url(../../img/oui/triangles.gif) no-repeat 0px 0px;width:7px;height:4px;}
+.icon-downTriangle4 {background:url(../../img/oui/triangles.gif) no-repeat 0px -3px;width:7px;height:4px;}
+.icon-leftTriangle4 {background:url(../../img/oui/triangles.gif) no-repeat 0px 0px;width:4px;height:7px;}
+.icon-rightTriangle4 {background:url(../../img/oui/triangles.gif) no-repeat -4px 0px;width:4px;height:7px;}
+
+.icon-rightDownTriangle6-black {background:url(../../img/oui/triangles.gif) no-repeat 0px -16px;width:6px;height:6px;}
+.icon-rightDownTriangle6-white {background:url(../../img/oui/triangles.gif) no-repeat -11px -16px;width:6px;height:6px;}
+.icon-rightHollowTriangle5-black {background:url(../../img/oui/triangles.gif) no-repeat -22px -7px;width:5px;height:9px;}
+.icon-rightHollowTriangle5-white {background:url(../../img/oui/triangles.gif) no-repeat -40px -7px;width:5px;height:9px;}
+
+.icon-upTriangle-up {background:url(../../img/oui/spiner_up2.png) no-repeat 0px 0px;width:8px;height:4px;}
+.icon-upTriangle-down {background:url(../../img/oui/spiner_up1.png) no-repeat 0px 0px;width:8px;height:4px;}
+.icon-downTriangle-up {background:url(../../img/oui/spiner_down2.png) no-repeat 0px 0px;width:8px;height:4px;}
+.icon-downTriangle-down {background:url(../../img/oui/spiner_down1.png) no-repeat 0px 0px;width:8px;height:4px;}
+
+.icon-drop-normal {background:url(../../img/oui/drop-normal.gif) no-repeat 0px 0px;width:22px;height:22px;}
+.icon-drop-over {background:url(../../img/oui/drop-over.gif) no-repeat 0px 0px;width:22px;height:22px;}
+.icon-prop-normal {background:url(../../img/oui/prop.ico) no-repeat 0px 0px;width:16px;height:16px;}
+.icon-prop-over {background:url(../../img/oui/prop.ico) no-repeat 0px 0px;width:16px;height:16px;}
+
+.icon-calendar-normal {background:url(../../img/oui/calendar.gif) no-repeat 0px 0px;width:22px;height:22px;}
+.icon-calendar-over {background:url(../../img/oui/calendar.gif) no-repeat -22px 0px;width:22px;height:22px;}
+.icon-plusMinus-plus {background:url(../../img/oui/tree.gif) no-repeat -76px -92px;width:18px;height:18px;}
+.icon-plusMinus-minus {background:url(../../img/oui/tree.gif) no-repeat -94px -92px;width:18px;height:18px;}
+
+.icon-check-normal {background:url(../../img/oui/tree.gif) no-repeat 0px 0px;width:14px;height:14px;}
+.icon-check-select {background:url(../../img/oui/tree.gif) no-repeat -14px 0px;width:14px;height:14px;}
+.icon-check-over {background:url(../../img/oui/tree.gif) no-repeat 0px -14px;width:14px;height:14px;}
+.icon-radio-normal {background:url(../../img/oui/tree.gif) no-repeat -28px 0px;width:14px;height:14px;}
+.icon-radio-select {background:url(../../img/oui/tree.gif) no-repeat -42px 0px;width:14px;height:14px;}
+.icon-radio-over {background:url(../../img/oui/tree.gif) no-repeat -28px -14px;width:14px;height:14px;}
+
+.icon-folder-close {background:url(../../img/oui/folder-close.gif) no-repeat 0px 0px;width:18px;height:14px;}
+.icon-folder-open {background:url(../../img/oui/folder-open.gif) no-repeat 0px 0px;width:18px;height:14px;}
+.icon-folder-file {background:url(../../img/oui/folder-file.gif) no-repeat 0px 0px;width:18px;height:16px;}
+
+.icon-treeBranch-treeF {background:url(../../img/oui/tree.gif) no-repeat -56px 0px;width:18px;height:18px;}
+.icon-treeBranch-treeT {background:url(../../img/oui/tree.gif) no-repeat -56px -18px;width:18px;height:18px;}
+.icon-treeBranch-treeL {background:url(../../img/oui/tree.gif) no-repeat -56px -36px;width:18px;height:18px;}
+.icon-treeBranch-treeWhite {background:url(../../img/oui/tree.gif) no-repeat -56px -54px;width:18px;height:18px;}
+.icon-treeBranch-treeFplus {background:url(../../img/oui/tree.gif) no-repeat -74px 0px;width:18px;height:18px;}
+.icon-treeBranch-treeMplus {background:url(../../img/oui/tree.gif) no-repeat -74px -18px;width:18px;height:18px;}
+.icon-treeBranch-treeLplus {background:url(../../img/oui/tree.gif) no-repeat -74px -36px;width:18px;height:18px;}
+.icon-treeBranch-treeOplus {background:url(../../img/oui/tree.gif) no-repeat -74px -54px;width:18px;height:18px;}
+.icon-treeBranch-treeFminus {background:url(../../img/oui/tree.gif) no-repeat -92px 0px;width:18px;height:18px;}
+.icon-treeBranch-treeMminus {background:url(../../img/oui/tree.gif) no-repeat -92px -18px;width:18px;height:18px;}
+.icon-treeBranch-treeLminus {background:url(../../img/oui/tree.gif) no-repeat -92px -36px;width:18px;height:18px;}
+.icon-treeBranch-treeOminus {background:url(../../img/oui/tree.gif) no-repeat -92px -54px;width:18px;height:18px;}
+
+.icon-minWin-normal {background:url(../../img/oui/window.gif) no-repeat -10px 0px;width:10px;height:10px;}
+.icon-maxWin-normal {background:url(../../img/oui/window.gif) no-repeat -20px 0px;width:10px;height:10px;}
+.icon-revertWin-normal {background:url(../../img/oui/window.gif) no-repeat 0px 0px;width:10px;height:10px;}
+.icon-closeWin-normal {background:url(../../img/oui/window.gif) no-repeat -30px 0px;width:10px;height:10px;}
+.icon-downWin-normal {background:url(../../img/oui/window.gif) no-repeat -40px 0px;width:10px;height:10px;}
+
+.icon-minWin-over {background:url(../../img/oui/window.gif) no-repeat -10px 0px;width:10px;height:10px;}
+.icon-maxWin-over {background:url(../../img/oui/window.gif) no-repeat -20px 0px;width:10px;height:10px;}
+.icon-revertWin-over {background:url(../../img/oui/window.gif) no-repeat 0px 0px;width:10px;height:10px;}
+.icon-closeWin-over {background:url(../../img/oui/window.gif) no-repeat -30px 0px;width:10px;height:10px;}
+.icon-downWin-over {background:url(../../img/oui/window.gif) no-repeat -40px 0px;width:10px;height:10px;}
+
+.icon-minWin-select {background:url(../../img/oui/window.gif) no-repeat -10px 0px;width:10px;height:10px;}
+.icon-maxWin-select {background:url(../../img/oui/window.gif) no-repeat -20px 0px;width:10px;height:10px;}
+.icon-revertWin-select {background:url(../../img/oui/window.gif) no-repeat 0px 0px;width:10px;height:10px;}
+.icon-closeWin-select {background:url(../../img/oui/window.gif) no-repeat -30px 0px;width:10px;height:10px;}
+.icon-downWin-select {background:url(../../img/oui/window.gif) no-repeat -40px 0px;width:10px;height:10px;}

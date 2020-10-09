@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body {  }
+
+.d-outer {  }
+.d-state-visible {  }
+.d-state-focus {  }
+
+.d-border { border-collapse:collapse; border-spacing:0; }
+
+.d-nw, .d-n, .d-ne, .d-w, .d-c, .d-e, .d-sw, .d-s, .d-se { background-color:#aabbd2; }
+.d-nw, .d-w, .d-sw, .d-ne, .d-e, .d-sw, .d-se { width:1px; }
+.d-nw, .d-n, .d-ne { height:1px; }
+.d-sw, .d-s, .d-se { height:1px; }
+
+.d-inner { background-color:#fff; }
+
+.d-dialog { background-color:#fff; }
+
+.d-header {  }
+.d-header-inner { position:relative; display:block; }
+.d-title { cursor:move; height:30px; background:url(images/header.gif) repeat-x 0 0; border-bottom:1px solid #b6c4d8; padding:0 30px 0 10px; overflow:hidden; text-overflow:ellipsis; line-height:30px; color:#136fb8; font-weight:700; }
+.d-state-notitle .d-title { display:none; }
+.d-close { display:block; position:absolute; top:6px; right:6px; outline:none; width:19px; height:18px; overflow:hidden; cursor:pointer; text-decoration:none; line-height:16px; -line-height:20px; text-align:center; color:#8fadd6; font-size:18px; }
+.d-close:hover { text-decoration:none; color:#f00; }
+
+.d-main { text-align:center; vertical-align:middle; min-width:9em; }
+.d-content { display:block\0; display:inline-block\9\0; -zoom:1; -display:inline; text-align:left; }
+.d-content.d-state-full { display:block; width:100%; margin:0; padding:0!important; height:100%; }
+/* 加载 */
+.d-content .d-loading { padding:20px; text-align:center; overflow:hidden; }
+.d-content .d-loading span { display:block; min-height:24px; height:auto !important; height:24px; background:url(images/load.gif) no-repeat 0 6px; padding-left:34px; overflow:visible; line-height:24px; }
+/* 模态 */
+.d-content .d-content-dialog { padding:10px; line-height:1.5; }
+/* 警告 */
+.d-content .d-content-warning { -width:expression(this.offsetWidth > 340 ? "340px" : "auto"); overflow:hidden; max-width:340px; padding:20px; }
+.d-content .d-content-warning span { display:block; min-height:24px; height:auto !important; height:24px; background:url(images/warning.gif) no-repeat 0 0; padding-left:34px; overflow:visible; word-wrap:break-word; word-break:break-all; line-height:24px; }
+/* 询问 */
+.d-content .d-content-confirm { -width:expression(this.offsetWidth > 340 ? "340px" : "auto"); overflow:hidden; max-width:340px; padding:20px; }
+.d-content .d-content-confirm span { display:block; min-height:24px; height:auto !important; height:24px; background:url(images/confirm.gif) no-repeat 0 0; padding-left:34px; overflow:visible; word-wrap:break-word; word-break:break-all; line-height:24px; }
+/* 成功 */
+.d-content .d-content-succeed { -width:expression(this.offsetWidth > 340 ? "340px" : "auto"); overflow:hidden; max-width:340px; padding:10px 20px; }
+.d-content .d-content-succeed span { display:block; min-height:24px; height:auto !important; height:24px; background:url(images/succeed.gif) no-repeat 0 0; padding-left:34px; overflow:visible; word-wrap:break-word; word-break:break-all; line-height:24px; }
+/* 失败 */
+.d-content .d-content-error { -width:expression(this.offsetWidth > 340 ? "340px" : "auto"); overflow:hidden; max-width:340px; padding:10px 20px; }
+.d-content .d-content-error span { display:block; min-height:24px; height:auto !important; height:24px; background:url(images/error.gif) no-repeat 0 0; padding-left:34px; overflow:visible; word-wrap:break-word; word-break:break-all; line-height:24px; }
+
+.d-footer {  }
+.d-buttons { border-top:1px solid #b6c4d8; background-color:#f2f7fd; padding:5px 10px; text-align:center; white-space:nowrap; }
+.d-button { cursor:pointer; display:inline-block; height:24px; border:1px solid #b6c4d8; background:url(images/btn-default.gif) repeat-x 0 0; margin:0 5px; padding:0 10px; -padding:0 5px; overflow:hidden; -line-height:20px; }
+.d-button:focus { border-color:#9eb0c8; }
+.d-button:hover { border-color:#9eb0c8; }
+.d-state-highlight { color:#fff; border:1px solid #3e9ad6; background:url(images/btn-highlight.gif) repeat-x 0 0; }
+.d-state-highlight:focus { border-color:#2a78c7; }
+.d-state-highlight:hover { border-color:#2a78c7; }
+.d-button[disabled] { cursor:default; filter:alpha(opacity=50); opacity:0.5; }
+
+/* 遮罩 */
+.d-mask { background-color:#1c1e21; filter:alpha(opacity=20); opacity:0.2; }
+
+.d-state-visible { /*filter:alpha(opacity=100); opacity:1;*/ }
+.d-state-focus { /*filter:alpha(opacity=100); opacity:1;*/ }
+
+.d-state-noTitle .d-nw, .d-state-noTitle .d-ne { height:5px; }
+.d-state-noTitle .d-titleBar { bottom:0; _bottom:0; _margin-top:0; }
+.d-state-noTitle .d-close { top:5px; }

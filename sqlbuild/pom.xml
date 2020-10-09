@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.tpsql.build</groupId>
+		<artifactId>tpsql-build</artifactId>
+		<version>1.0</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<artifactId>tpsql-builder</artifactId>
+	<packaging>jar</packaging>
+
+	<name>tptps application - tpsql-builder</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.tpsql</groupId>
+			<artifactId>tpsql-core</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/tpsql-core-1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.tpsql</groupId>
+			<artifactId>tpsql-sql</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/tpsql-sql-1.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.tpsql</groupId>
+			<artifactId>tpsql-dao</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/tpsql-dao-1.0.jar</systemPath>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>tpsql-builder-1.0</finalName>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<!-- 指定打包的jar包输出路径-->
+					<outputDirectory>
+						../build/lib
+					</outputDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+ 
+</project>
